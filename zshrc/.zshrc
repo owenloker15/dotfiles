@@ -12,3 +12,10 @@ SAVEHIST=50000
 setopt inc_append_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+fo() {
+  nvim "$(fzf)"
+}
+
+# Or if you prefer an alias:
+alias fo='nvim "$(fzf)"'

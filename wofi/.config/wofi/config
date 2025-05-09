@@ -1,0 +1,16 @@
+
+# wofi config
+prompt = Search...
+show = drun
+allow_images = true
+insensitive = true
+term = foot
+width = 600
+height = 400
+columns = 1
+lines = 10
+location = center
+hide_scroll = false
+allow_markup = true
+image_size = 32
+no_actions = true
