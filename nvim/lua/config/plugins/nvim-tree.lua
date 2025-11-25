@@ -5,9 +5,11 @@ return {
     },
     config = function()
         require("nvim-tree").setup({
-            sort_by = "case_sensitive",
+            sort = {
+                sorter = "case_sensitive",
+            },
             view = {
-                width = 30,
+                width = 40,
                 side = "left",
                 preserve_window_proportions = true,
             },
@@ -48,7 +50,9 @@ return {
         })
 
         -- Keybindings
-        vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
-        vim.keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
+        vim.keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
+        vim.keymap.set("n", "<leader>ef", ":NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
+        vim.keymap.set("n", "<leader>ec", ":NvimTreeCollapse<CR>", { desc = "Collapse NvimTree" })
+        vim.keymap.set("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh NvimTree" })
     end
 }
